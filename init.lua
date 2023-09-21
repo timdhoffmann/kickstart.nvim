@@ -218,8 +218,19 @@ do -- Options
     -- Set highlight on search
     vim.o.hlsearch = false
 
+    -- Highlight search pattern match while typing.
+    vim.o.incsearch = true
+
     -- Make line numbers default
     vim.wo.number = true
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+
+    -- highlight current line.
+    vim.o.cursorline = true
+
+    -- Start scrolling when reaching x lines from top or bottom.
+    vim.o.scrolloff = 8
 
     -- Enable mouse mode
     vim.o.mouse = 'a'
@@ -271,6 +282,10 @@ do -- [[ Basic Keymaps ]]
         expr = true,
         silent = true
     })
+
+    -- Keep cursor centered when paging.
+    -- vim.keymap.set("n", "<C-d>", "<C-d>zz")
+    -- vim.keymap.set("n", "<C-u>", "<C-u>zz") 
 
 end
 
