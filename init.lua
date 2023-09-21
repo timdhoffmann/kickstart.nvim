@@ -143,10 +143,10 @@ if not vim.g.vscode then
         }
     }, {
         -- Theme inspired by Atom
-        'navarasu/onedark.nvim',
+        'morhetz/gruvbox',
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme 'onedark'
+            vim.cmd.colorscheme 'gruvbox'
         end
     }, {
         -- Set lualine as statusline
